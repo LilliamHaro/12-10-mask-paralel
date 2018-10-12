@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <style>
+    body {
+      background: black;
+    }
+    .svg-clip {
+      width: 0;
+      height: 0;
+    }
+
+    .background-image-div {
+      width: 80%;
+      display: block;
+      height: 80vh;
+      background: #000000 url('https://images.unsplash.com/photo-1447678523326-1360892abab8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f2c48f62e3ccbc0948518b2188118f95') no-repeat center center;
+      background-size: cover;
+
+      /* lets clip it*/
+      -webkit-clip-path: url(#hero-clip);
+      clip-path: url(#hero-clip);
+    }
+  </style>
+
+  <div class="background-image-div"></div>
+  <svg height="0" width="0" class="svg-clip">
+    <defs>
+      <!-- 
+        Adding the clipPathUnits="objectBoundingBox" to the clipPath element.
+        This sizes the polygon properly.
+        -->
+      <clipPath id="hero-clip" clipPathUnits="objectBoundingBox">
+        <!-- utilize relative values for the points attribute -->
+        <!-- <polygon fill="none" points=".025,0 .13,0 .105,1 0,1"/>
+        <polygon fill="none" points=".155,0 .27,0 .245,1 .13,1"/>
+        <polygon fill="none" points=".295,0 .42,0 .395,1 .27,1"/>
+        <polygon fill="none" points=".445,0 .57,0 .545,1 .42,1"/>
+        <polygon fill="none" points=".595,0 .72,0 .695,1 .57,1"/>
+        <polygon fill="none" points=".745,0 .87,0 .845,1 .72,1"/> -->
+
+        <polygon fill="none" points=".025,0 .16,0 .135,1 0,1"/>
+        <polygon fill="none" points=".185,0 .32,0 .295,1 .16,1"/>
+        <polygon fill="none" points=".345,0 .48,0 .455,1 .32,1"/>
+        <polygon fill="none" points=".505,0 .64,0 .615,1 .48,1"/>
+        <polygon fill="none" points=".665,0 .8,0 .775,1 .64,1"/>
+        <polygon fill="none" points=".825,0 .96,0 .935,1 .8,1"/>
+        
+      </clipPath>
+    </defs>
+  </svg>
+
+</body>
+
+</html>
+
+
+
